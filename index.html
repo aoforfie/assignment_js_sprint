@@ -1,7 +1,73 @@
 <html>
   <head>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="scripts.js">
+    var sprintFunctions = {
+      //http://www.jstips.co/en/javascript/calculate-the-max-min-value-from-an-array/
+      largestEl : function (array) {
+         return Math.max.apply(null,array);
+      },
+      // http://eddmann.com/posts/ten-ways-to-reverse-a-string-in-javascript/
+      reversed : function reverse (string) {
+      return string.split('').reverse().join('');
+      }
+      ,
+      //https://en.wikipedia.org/wiki/Snake_case
+      //http://epeli.github.io/underscore.string/
+      loudSnakeCase : function (sentence) {
+       return camelize(sentence).titleize().underscored();
+      }
+      ,
+      fizzBuzz : function (digit) {
+        var digit = prompt ("Please input a number:");
+        for ( var digit = 1; digit < digit.length; digit ++ ) {
+          if ( digit % 15 === 0) {
+            return "FIZZBUZZ";
+        }
+          else if (digit % 3 === 0) {
+            return "FIZZ";
+          }
+          
+          else if (digit % 5 === 0) {
+            return "BUZZ";
+          }
+          
+          else {
+            return digit;
+          }
+        }
+      }
+      
+      // https://stackoverflow.com/questions/9914216/how-do-i-separate-an-integer-into-separate-digits-in-an-array-in-javascript
+      // const n = 123456;
+      Array.from(digit.toString()).map(Number);
+
+        ,
+      //https://stackoverflow.com/questions/4025893/how-to-check-identical-array-in-most-efficient-way
+      compareArrays : function arraysEqual (array1, array2) {
+     if(array1.length !== array2.length)
+        return false;
+      for(var i = array1.length; i--;) {
+        if(array1[i] !== array2[i])
+            return false;    }
+    return true; }
+      ,
+      myMap : function (array,fxn) {
+        var elements =array.from(array.toString()).map(Number);
+        var fxn = function {
+          return ;
+        };
+      }
+      ,
+        //https://stackoverflow.com/questions/30150251/find-all-prime-numbers-from-array
+      prime : function (PDigit) {
+         for (int j=2; j<array[i]; j++){
+    if(array[PDigit]%j==0){
+            isPrime = false;
+            break;
+        }
+    };
+    </script>
     <script src="scripts_spec.js"></script>
     <style>
       h1,h2,h3,p{
